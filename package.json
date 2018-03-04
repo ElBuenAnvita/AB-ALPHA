@@ -1,0 +1,8 @@
+{
+  "name": "AnviBot",
+  "version": "1.0.0",
+  "description": "A simple Bot",
+  "main": "bot.js",
+  "author": "ElBuenAnvita",
+  "dependencies": {}
+}
