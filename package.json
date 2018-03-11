@@ -4,5 +4,8 @@
   "description": "A simple Bot",
   "main": "bot.js",
   "author": "ElBuenAnvita",
-  "dependencies": {}
+  "dependencies": {
+    "discord.js": "11.1.0",
+    "request": "2.81.0"
+  }
 }
