@@ -24,7 +24,19 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content === '--que') {
+    if (message.content === 'que') {
+    	message.channel.send('so! :cheese: ');
+  	}
+});
+
+client.on('message', message => {
+    if (message.content === '--chiste') {
+    	message.channel.send('Había una vez un niño llamado "Tarea"; la profesora un día dijo "Tarea para la casa" y el niño se fué a la casa');
+  	}
+});
+
+client.on('message', message => {
+    if (message.content === 'k') {
     	message.channel.send('so! :cheese: ');
   	}
 });
