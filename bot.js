@@ -14,8 +14,6 @@ client.on('message', message => {
         message.reply('Mis comandos son: `.help` `.ping` `.info` Bot en desarrollo, creado por ElBuenAnvita.');
     }
 });
-    bot.user.SetGame('.help')
-});
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
