@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
-  client.user.setGame('perder el tiempo .help')
+ client.user.setActivity('--help');
 });
 
 client.on('message', message => {
@@ -19,7 +19,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '--help') {
-    	message.reply('Mis actuales comandos son `--ping` `--info` `--help`. Más comandos se añadirán en breve.');
+    	message.reply('Mis actuales comandos son `--ping` `--info` `--help` `--chiste` `--invite`. Más comandos se añadirán en breve.');
   	}
 });
 
@@ -31,7 +31,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '--chiste') {
-    	message.channel.send('Había una vez un niño llamado "Tarea"; la profesora un día dijo "Tarea para la casa" y el niño se fué a la casa');
+    	message.channel.send('chiste');
   	}
 });
 
