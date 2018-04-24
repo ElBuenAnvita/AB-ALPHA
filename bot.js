@@ -20,7 +20,7 @@ client.on("message", message => {
 });
 
 client.on('ready', () => {
- client.user.setActivity('--ayuda');
+ client.user.setActivity('--ayuda | AnviBot');
 });
 
 client.on('message', message => {
