@@ -13,6 +13,9 @@ client.on("message", message => {
   } else
   if (message.content.startsWith(prefix + "ayuda")) {
     message.channel.send("Mis actuales comandos son: `--ayuda` `--ping` `--xDD`. Más comandos serán añadidos proximamente\n Bot creado por ElBuenAnvita");
+  } else
+  if (message.content.startsWith(prefix + "info")) {
+    message.channel.send("Estado del Bot: **Conectado**\nFallos: **0**\nCreador: **ElBuenAnvita**\nVersión del Bot: **1.1.4**");
   }
 });
 
@@ -21,20 +24,20 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === '--ping') {
+    if (message.content === '999ping') {
     	message.reply('**Pong!** :ping_pong:');
   	}
 });
 
 client.on('message', message => {
-    if (message.content === '--info') {
-    	message.reply('Bot creado por ElBuenAnvita. BETA VERSION 1.1.2');
+    if (message.content === '--informacao') {
+    	message.reply('Al parecer intentas acceder a comandos antiguos del bot. Usa `--ayuda` para conseguir los nuevos comandos ;)');
   	}
 });
 
 client.on('message', message => {
     if (message.content === '--help') {
-    	message.reply('Mis actuales comandos son `--ping` `--info` `--help` `--chiste` `--invite`. Más comandos se añadirán en breve.');
+    	message.reply('Al parecer intentas acceder a comandos antiguos del bot. Usa `--ayuda` para conseguir los nuevos comandos ;)');
   	}
 });
 
@@ -46,19 +49,25 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '--chiste') {
-    	message.channel.send('chiste');
+    	message.channel.send('Al parecer intentas acceder a comandos antiguos del bot. Usa `--ayuda` para conseguir los nuevos comandos ;)');
   	}
 });
 
 client.on('message', message => {
     if (message.content === 'k') {
-    	message.channel.send('so! :cheese: ');
+    	message.channel.send('so! :cheese:');
   	}
 });
 
 client.on('message', message => {
     if (message.content === 'omae wa mou shindeiru') {
     	message.channel.send('なに？！');
+  	}
+});
+
+client.on('message', message => {
+    if (message.content === 'ki') {
+    	message.channel.send('ero pan :bread:');
   	}
 });
 
