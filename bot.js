@@ -1,8 +1,23 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const prefix = "--";
+
+client.on("message", message => {
+  if (!message.content.startsWith(prefix)) return;
+  
+  if (message.content.startsWith(prefix + "ping")) {
+    message.channel.send("**Pong!** :ping_pong:");
+  } else
+  if (message.content.startsWith(prefix + "xDD")) {
+    message.channel.send("xDD");
+  } else
+  if (message.content.startsWith(prefix + "ayuda")) {
+    message.channel.send("Mis actuales comandos son: `--ayuda` `--ping` `--xDD`. Más comandos serán añadidos proximamente\n Bot creado por ElBuenAnvita");
+  }
+});
 
 client.on('ready', () => {
- client.user.setActivity('--help');
+ client.user.setActivity('--ayuda');
 });
 
 client.on('message', message => {
