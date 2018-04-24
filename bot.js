@@ -30,14 +30,6 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content === '--testembed') {
-    	message.channel.sendEmbed(
-        color: 3447003,
-        title: "Esto es un embed!",
-        url: "https://media1.tenor.com/images/d540e337c61e7d226007fa3702cbcc33/tenor.gif");
-});
-
-client.on('message', message => {
     if (message.content === '--help') {
     	message.reply('Al parecer intentas acceder a comandos antiguos del bot. Usa `--ayuda` para conseguir los nuevos comandos ;)');
   	}
