@@ -12,10 +12,10 @@ client.on("message", message => {
     message.channel.send("xDD");
   } else
   if (message.content.startsWith(prefix + "ayuda")) {
-    message.channel.send("Mis actuales comandos son: `--ayuda` `--ping` `--xDD` `--info`. Más comandos serán añadidos pronto.\nOwO");
+    message.channel.send("Mis actuales comandos son: `--ayuda` `--ping` `--avatar` `--info`. Más comandos serán añadidos pronto.\nOwO");
   } else
   if (message.content.startsWith(prefix + "info")) {
-    message.channel.send("Estado del Bot: **Conectado**\nFallos: **0**\nCreador: **ElBuenAnvita**\nVersión del Bot: **1.1.4**");
+    message.channel.send("Estado del Bot: **Conectado**\nFallos: **0**\nCreador: **ElBuenAnvita**\nVersión del Bot: **beta_1.1.5**");
   }
 });
 
