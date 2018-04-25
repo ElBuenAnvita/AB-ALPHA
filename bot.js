@@ -84,11 +84,5 @@ client.on('message', message => {
   	}
 });
 
-client.on('message', message => {
-    if (message.content === 'test1') {
-    	message.channel.send({embed: {
-        description: "Un simple test de embed"
-}});
-
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
