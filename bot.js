@@ -19,8 +19,11 @@ client.on("message", message => {
   }
 });
 
-client.on('ready', () => {
- client.user.setActivity('--ayuda | AnviBot');
+client.setPresence({
+  game:{
+    name: "cómo ella es feliz con otro | --ayuda"
+    type: 3
+  }
 });
 
 client.on('message', message => {
