@@ -20,8 +20,8 @@ client.on("message", message => {
 });
 
 client.user.setPresence({
-  game:{
-    name: "cómo ella es feliz con otro | --ayuda"
+  game: {
+    name: 'cómo ella es feliz con otro | --ayuda'
     type: 1
   }
 });
