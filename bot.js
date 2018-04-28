@@ -19,10 +19,10 @@ client.on("message", message => {
   }
 });
 
-client.setPresence({
+client.user.setPresence({
   game:{
-    name: 'cómo ella es feliz con otro | --ayuda'
-    type: '3'
+    name: "cómo ella es feliz con otro | --ayuda"
+    type: 1
   }
 });
 
