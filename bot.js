@@ -21,8 +21,8 @@ client.on("message", message => {
 
 client.setPresence({
   game:{
-    name: "cómo ella es feliz con otro | --ayuda"
-    type: 3
+    name: 'cómo ella es feliz con otro | --ayuda'
+    type: '3'
   }
 });
 
