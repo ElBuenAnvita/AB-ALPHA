@@ -29,12 +29,12 @@ client.on("message", message => {
 });
 
 client.on('message', message => {
-    if (command === "asl") {
+    if (command === 'asl') {
       let age = args[0];
       let sex = args[1];
       let location = args[2];
       message.reply('Hola, ${message.author.username}, veo que tienes ${age} años, eres ${sex} y que eres de {location}. ¿Quieres salir?');
-  	}
+    }
 });
 
 client.on('message', message => {
