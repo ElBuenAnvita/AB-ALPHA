@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "--";
 const args = message.content.slice(prefix.length).trim().split(/ +/g);
-const command = args.shift().toLowerCase();
 
 client.on('ready', () => {
   client.user.setGame('--ayuda | AnviBot')
@@ -29,11 +28,11 @@ client.on("message", message => {
 });
 
 client.on('message', message => {
-    if (command === 'asl') {
+    if (message.content.startsWith(prefix + "asl")) {
       let age = args[0];
       let sex = args[1];
       let location = args[2];
-      message.reply('Hola, ${message.author.username}, veo que tienes ${age} años, eres ${sex} y que eres de {location}. ¿Quieres salir?');
+      message.channel.send('Hola, ${message.author.username}, veo que tienes ${age} años, eres ${sex} y que eres de {location}. ¿Quieres salir?');
     }
 });
 
