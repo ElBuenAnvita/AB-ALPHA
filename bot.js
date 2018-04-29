@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "--";
-const args = message.content.slice(prefix.length).trim().split(/ +/g);
 
 client.on('ready', () => {
   client.user.setGame('--ayuda | AnviBot')
