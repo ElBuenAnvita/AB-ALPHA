@@ -2,7 +2,9 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "--";
 
-client.user.setActivity('--ayuda | AnviBot')
+client.on('ready', () => {
+  client.user.setGame('--ayuda | AnviBot')
+});
 
 client.on("message", message => {
   if (!message.content.startsWith(prefix)) return;
