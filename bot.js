@@ -20,6 +20,7 @@ client.on("message", message => {
 });
 
 client.user.setPresence({
+  status: 'online'
   game: {
     name: 'cómo ella es feliz con otro | --ayuda'
     type: 1
