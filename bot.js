@@ -18,6 +18,10 @@ client.on("message", message => {
   if (message.content.startsWith(prefix + "ayuda")) {
     message.channel.send("Mis actuales comandos son: `--ayuda` `--ping` `--avatar` `--info`. Más comandos serán añadidos pronto.\nOwO");
   } else
+  if (message.content.startsWith(prefix + "comandos")) {
+    message.channel.send("Te envié mis comandos por mensaje privado," + message.author.mention + ".");
+    message.author.send("Mis comandos actuales son:\n**--ayuda**: Consigue ayuda del bot.\n**--info**: Información del bot\n**--infome**: Consigue tu id de jugador.\n**--ping**: ¡Ping Pong! :ping_pong:\n**--avatar**: Consulta la URL de tu avatar actual.\n**--invite**: Invita a AnviBot a tu servidor de Discord!");
+  } else
   if (message.content.startsWith(prefix + "info")) {
     message.channel.send("Estado del Bot: **Conectado**\nFallos: **0**\nCreador: **ElBuenAnvita**\nVersión del Bot: **beta_1.1.5**");
   } else
@@ -27,7 +31,7 @@ client.on("message", message => {
 });
 
 client.on('message', message => {
-    if (message.content.startsWith(prefix + "info-me")) {
+    if (message.content.startsWith(prefix + "infome")) {
       message.channel.send('Usuario: **' + message.author.username + '**\nID:' + message.author.id);
     }
 });
