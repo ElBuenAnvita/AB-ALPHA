@@ -2,6 +2,8 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "--";
 
+client.user.setActivity('--ayuda | AnviBot')
+
 client.on("message", message => {
   if (!message.content.startsWith(prefix)) return;
   
@@ -36,7 +38,6 @@ client.on('message', message => {
 
 // Create an event listener for messages
 client.on('message', message => {
-  // If the message is "what is my avatar"
   if (message.content === '--avatar') {
     // Send the user's avatar URL
     message.channel.send('**Tu avatar es:**\n' + message.author.avatarURL);
