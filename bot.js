@@ -28,11 +28,8 @@ client.on("message", message => {
 });
 
 client.on('message', message => {
-    if (message.content.startsWith(prefix + "asl")) {
-      let age = args[0];
-      let sex = args[1];
-      let location = args[2];
-      message.channel.send('Hola, ${message.author.username}, veo que tienes ${age} años, eres ${sex} y que eres de {location}. ¿Quieres salir?');
+    if (message.content.startsWith(prefix + "info-me")) {
+      message.channel.send('Usuario: **' + message.author.username + '**\nID:' + message.author.id);
     }
 });
 
