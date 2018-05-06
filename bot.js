@@ -1,7 +1,11 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "--";
-
+var ejemplo = [
+  "No.",
+  "Sí.",
+];
+  
 client.on('ready', () => {
   client.user.setGame('--ayuda')
 });
@@ -38,11 +42,6 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === 'prueba 1') {
-      const ejemplo = {
-        "Hola1",
-        "Hola2",
-        "¿Qué esperas?"
-      }
     	message.channel.send({ ejemplo });
   	}
 });
