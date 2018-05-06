@@ -46,7 +46,7 @@ client.on('message', message => {
     if (message.content.startsWith(prefix + "kiss")) {
       const embed = {
         "title": "",
-        "description": "¿Besandote tú mismo?, **" + message.author.username + "** Perdón por eso.",
+        "description": "¿Besandote tú mism@, **" + message.author.username + "**? Perdón por eso.",
         "color": 2335,
         "image": {
           "url": "https://media.giphy.com/media/ZRSGWtBJG4Tza/giphy.gif"
