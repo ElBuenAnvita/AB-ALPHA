@@ -38,7 +38,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === 'prueba 1') {
-    	message.reply('respuesta1'), ('respuesta2');
+    	message.reply('respuesta1', 'respuesta2');
   	}
 });
 
