@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const prefix = "--";
 
 client.on('ready', () => {
-  client.user.setGame('--ayuda | AnviBot')
+  client.user.setGame('${prefix}ayuda | ¡En ${client.guilds.size} servidores!')
 });
 
 client.on("message", message => {
