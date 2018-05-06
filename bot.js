@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "--";
+const embed = new Discord.RichEmbed();
 
 client.on('ready', () => {
   client.user.setGame('--ayuda')
@@ -20,7 +21,7 @@ client.on("message", message => {
   } else
   if (message.content.startsWith(prefix + "comandos")) {
     message.channel.send("Te envié mis comandos por mensaje privado, " + message.author.username);
-    message.author.send("```Comandos```\n**--ayuda**: Consigue ayuda del bot.\n**--info**: Información del bot\n**--infome**: Consigue tu id de jugador.\n**--ping**: ¡Ping Pong! :ping_pong:\n**--avatar**: Consulta la URL de tu avatar actual.\n**--invite**: Invita a AnviBot a tu servidor de Discord!\n**--xDD**: xDD\n```Respuestas```\n**ayy**: lmao\n**omae wa mou shindeiru**: NANI?!\n**k**, **ke**, **que**: so! :cheese: \n**ki**: ero pan :bread: \n```Página```\nhttp://anvibot.blogspot.com/p/commands");
+    message.author.send("```Comandos```\n**--ayuda**: Consigue ayuda del bot.\n**--info**: Información del bot\n**--me**: Consigue tu id de jugador.\n**--ping**: ¡Ping Pong! :ping_pong:\n**--avatar**: Consulta la URL de tu avatar actual.\n**--invite**: Invita a AnviBot a tu servidor de Discord!\n**--xDD**: xDD\n```Respuestas```\n**ayy**: lmao\n**omae wa mou shindeiru**: NANI?!\n**k**, **ke**, **que**: so! :cheese: \n**ki**: ero pan :bread: \n```Página```\nhttp://anvibot.blogspot.com/p/commands");
   } else
   if (message.content.startsWith(prefix + "info")) {
     message.channel.send("Estado del Bot: **Conectado**\nFallos: **0**\nCreador: **ElBuenAnvita**\nVersión del Bot: **beta_1.1.5**");
@@ -31,7 +32,7 @@ client.on("message", message => {
 });
 
 client.on('message', message => {
-    if (message.content.startsWith(prefix + "infome")) {
+    if (message.content.startsWith(prefix + "me")) {
       message.channel.send('Usuario: **' + message.author.username + '**\nID:' + message.author.id);
     }
 });
@@ -40,6 +41,12 @@ client.on('message', message => {
     if (message.content === '--help') {
     	message.reply('Al parecer intentas acceder a comandos antiguos del bot. Usa `--ayuda` para conseguir los nuevos comandos ;)');
   	}
+});
+
+client.on('message', message => {
+    if (message.content.startsWith(prefix + "kiss")) {
+      message.channel.send('¿Besandote tú mism@, **' + message.author.username + '**? Perdón por eso.');
+    }
 });
 
 // Create an event listener for messages
@@ -69,12 +76,6 @@ client.on('message', message => {
 client.on('message', message => {
     if (message.content === 'ayy') {
     	message.channel.send('lmao');
-  	}
-});
-
-client.on('message', message => {
-    if (message.content === '--chiste') {
-    	message.channel.send('Al parecer intentas acceder a comandos antiguos del bot. Usa `--ayuda` para conseguir los nuevos comandos ;)');
   	}
 });
 
