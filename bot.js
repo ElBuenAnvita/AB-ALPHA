@@ -53,7 +53,7 @@ client.on('message', message => {
           "url": "https://media.giphy.com/media/ZRSGWtBJG4Tza/giphy.gif"
         }
       }
-      message.channel.send('Este...' + { embed });
+      message.channel.send({ embed });
     }
 });
 
