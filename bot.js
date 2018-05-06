@@ -37,8 +37,8 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content === '--help') {
-    	message.reply('Al parecer intentas acceder a comandos antiguos del bot. Usa `--ayuda` para conseguir los nuevos comandos ;)');
+    if (message.content === 'prueba 1') {
+    	message.reply('respuesta1'), ('respuesta2');
   	}
 });
 
