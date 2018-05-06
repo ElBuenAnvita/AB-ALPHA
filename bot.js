@@ -38,7 +38,12 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === 'prueba 1') {
-    	message.reply('respuesta1', 'respuesta2');
+      var ejemplo = {
+        "Hola1",
+        "Hola2",
+        "¿Qué esperas?"
+      }
+    	message.reply({ ejemplo });
   	}
 });
 
