@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "--";
-const embed = new Discord.RichEmbed();
 
 client.on('ready', () => {
   client.user.setGame('--ayuda')
@@ -45,7 +44,16 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content.startsWith(prefix + "kiss")) {
-      message.channel.send('¿Besandote tú mism@, **' + message.author.username + '**? Perdón por eso.');
+      const embed = {
+        "title": "Hola1",
+        "description": "¿Besandote tú mismo? Perdón por eso.",
+        "url": "https://media.giphy.com/media/ZRSGWtBJG4Tza/giphy.gif",
+        "color": 4972767,
+        "thumbnail": {
+          "url": "https://media.giphy.com/media/ZRSGWtBJG4Tza/giphy.gif"
+        }
+      }
+      message.channel.send('Este...' + embed);
     }
 });
 
