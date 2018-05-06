@@ -38,12 +38,12 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === 'prueba 1') {
-      var ejemplo = {
+      const ejemplo = {
         "Hola1",
         "Hola2",
         "¿Qué esperas?"
       }
-    	message.reply({ ejemplo });
+    	message.channel.send({ ejemplo });
   	}
 });
 
