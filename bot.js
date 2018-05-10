@@ -7,7 +7,7 @@ var ejemplo = [
 ];
   
 client.on('ready', () => {
-  client.user.setGame('--ayuda')
+  client.user.setGame(prefix + 'ayuda | Ayudando a' + client.guilds.size + 'servidores n.n')
 });
 
 client.on("message", message => {
