@@ -60,12 +60,32 @@ client.on('message', message => {
     }
 });
 
-// Create an event listener for messages
 client.on('message', message => {
-  if (message.content === '--avatar') {
-    // Send the user's avatar URL
-    message.channel.send('**Tu avatar es:**\n' + message.author.avatarURL);
-  }
+    if (message.content.startsWith(prefix + "avatar")) {
+      const embed = {
+        "title": "",
+        "description": "Este eres tú, **" + message.author.username + "**, que wap@ estás.",
+        "color": 2335,
+        "image": {
+          "url": message.author.avatarURL
+        }
+      }
+      message.channel.send({ embed });
+    }
+});
+
+client.on('message', message => {
+    if (message.content.startsWith(prefix + "pat")) {
+      const embed = {
+        "title": "",
+        "description": "No te preocupes, **" + message.author.username + "**, yo te acaricio.",
+        "color": 2335,
+        "image": {
+          "url": "http://2.bp.blogspot.com/-X0ZDtsVYvVk/WvOwG3Y1BYI/AAAAAAAABiQ/lt6TDbpSyXMoIglTBQH-JonovXCgB2QjACK4BGAYYCw/s1600/anime-head-pat-gif-4.gif"
+        }
+      }
+      message.channel.send({ embed });
+    }
 });
 
 // Create an event listener for new guild members
