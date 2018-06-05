@@ -20,7 +20,7 @@ client.on("message", message => {
   } else
   if (message.content.startsWith(prefix + "comandos")) {
     message.channel.send("Te envié mis comandos por mensaje privado, " + message.author.username);
-    message.author.send("```Comandos```\n**--ayuda**: Consigue ayuda del bot.\n**--info**: Información del bot\n**--me**: Consigue tu id de jugador.\n**--ping**: ¡Ping Pong! :ping_pong:\n**--avatar**: Consulta la URL de tu avatar actual.\n**--invite**: Invita a AnviBot a tu servidor de Discord!\n**--xDD**: xDD\n```Respuestas```\n**ayy**: lmao\n**omae wa mou shindeiru**: NANI?!\n**k**, **ke**, **que**: so! :cheese: \n**ki**: ero pan :bread: \n```Página```\nhttp://anvibot.blogspot.com/p/commands");
+    message.author.send("```Comandos```\n**--ayuda**: Consigue ayuda del bot.\n**--info**: Información del bot\n**--me**: Consigue tu id de jugador.\n**--ping**: ¡Ping Pong! :ping_pong:\n**--8ball**: Efectua una pregunta <<Sí/no>> (en desuso)\n**--avatar**: Consulta la URL de tu avatar actual.\n**--invite**: Invita a AnviBot a tu servidor de Discord!\n**--xDD**: xDD\n```Respuestas```\n**ayy**: lmao\n**omae wa mou shindeiru**: NANI?!\n**k**, **ke**, **que**: so! :cheese: \n**ki**: ero pan :bread: \n```Página```\nhttp://anvibot.blogspot.com/p/commands");
   } else
   if (message.content.startsWith(prefix + "info")) {
     message.channel.send("Estado del Bot: **Conectado**\nFallos: **0**\nCreador: **ElBuenAnvita**\nVersión del Bot: **beta_1.1.5**");
