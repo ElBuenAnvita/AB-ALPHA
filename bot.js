@@ -1,7 +1,7 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
-const prefix = "--";
-var quotes = ["Si", "No",]
+var quotes = CONFIG.quotes;
+var prefix = CONFIG.prefix;
+var command = CONFIG.command;
+
 var InfiniteLoop = require('infinite-loop');
 var il = new InfiniteLoop;
 
@@ -13,6 +13,14 @@ il.add(randomQuote, []);
 il.run();
 
 console.log(randomQuote());
+
+var Discord = require("discord.js");
+var client = new Discord.Client();
+client.on("message", (message) => {
+  if (message.content.startsWith(prefix command)) {
+    message.channel.sendMessage(randomQuote());
+  }
+});
   
 client.on('ready', () => {
   client.user.setGame(prefix + 'ayuda | Ayudando a ' + client.guilds.size + ' servidores, y sirviendo a ' + client.users.size + ' personitas n_n')
