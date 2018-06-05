@@ -7,6 +7,12 @@ var il = new InfiniteLoop;
 
 function randomQuote() {
 	return quotes[Math.floor(Math.random() * quotes.length)];
+};
+il.add(randomQuote, []);
+
+il.run();
+
+console.log(randomQuote());
   
 client.on('ready', () => {
   client.user.setGame(prefix + 'ayuda | Ayudando a ' + client.guilds.size + ' servidores, y sirviendo a ' + client.users.size + ' personitas n_n')
