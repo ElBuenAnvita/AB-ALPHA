@@ -1,0 +1,5 @@
+{
+    "prefix": "--",
+    "command": "8ball",
+    "quotes":["Sí", "No", "No sé", "Probablemente sí", "Probablemente no", "Dejame pensarlo un momento",]
+}
