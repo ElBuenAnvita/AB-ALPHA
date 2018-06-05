@@ -1,27 +1,6 @@
-const quotes = CONFIG.quotes;
-const prefix = CONFIG.prefix;
-const command = CONFIG.command;
-
-const InfiniteLoop = require('infinite-loop');
-const il = new InfiniteLoop;
-
-function randomQuote() {
-	return quotes[Math.floor(Math.random() * quotes.length)];
-};
-il.add(randomQuote, []);
-
-il.run();
-
-console.log(randomQuote());
-
 const Discord = require("discord.js");
 const client = new Discord.Client();
-
-client.on("message", (message) => {
-  if (message.content.startsWith(prefix command)) {
-    message.channel.sendMessage(randomQuote());
-  }
-});
+const prefix = "--";
   
 client.on('ready', () => {
   client.user.setGame(prefix + 'ayuda | Ayudando a ' + client.guilds.size + ' servidores, y sirviendo a ' + client.users.size + ' personitas n_n')
