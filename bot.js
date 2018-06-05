@@ -38,7 +38,7 @@ client.on("message", message => {
     let replies = ["Sí", "No"];
     let result = Math.floor((Math.random()* replies.lenght));
     
-    message.channel.send("Tal vez..." + result);
+    message.channel.send("{ result });
   }
 });
 
