@@ -1,9 +1,9 @@
-var quotes = CONFIG.quotes;
-var prefix = CONFIG.prefix;
-var command = CONFIG.command;
+const quotes = CONFIG.quotes;
+const prefix = CONFIG.prefix;
+const command = CONFIG.command;
 
-var InfiniteLoop = require('infinite-loop');
-var il = new InfiniteLoop;
+const InfiniteLoop = require('infinite-loop');
+const il = new InfiniteLoop;
 
 function randomQuote() {
 	return quotes[Math.floor(Math.random() * quotes.length)];
@@ -14,8 +14,9 @@ il.run();
 
 console.log(randomQuote());
 
-var Discord = require("discord.js");
-var client = new Discord.Client();
+const Discord = require("discord.js");
+const client = new Discord.Client();
+
 client.on("message", (message) => {
   if (message.content.startsWith(prefix command)) {
     message.channel.sendMessage(randomQuote());
