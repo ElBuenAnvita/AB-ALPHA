@@ -36,6 +36,18 @@ client.on("message", message => {
   }
 });
 
+client.on("message", message => {
+  if (!message.content.startsWith(prefix)) return;
+  
+  if (message.content.startsWith(prefix + "8ball")) {
+    
+    let replies = ["Sí", "No"];
+    let result = Math.floor((Math.random()* replies.lenght));
+    
+    message.channel.send("Tal vez...", replies[result]);
+  }
+});
+
 client.on('message', message => {
     if (message.content.startsWith(prefix + "me")) {
       message.channel.send('Usuario: **' + message.author.username + '**\nID:' + message.author.id);
