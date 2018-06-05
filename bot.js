@@ -5,12 +5,6 @@ const prefix = "--";
 client.on('ready', () => {
   client.user.setGame(prefix + 'ayuda | Ayudando a ' + client.guilds.size + ' servidores, y sirviendo a ' + client.users.size + ' personitas n_n')
 });
-
-client.on("message", (message) => {
-  if (message.content.startsWith(prefix + "8ball")) {
-    message.channel.sendMessage(randomQuote());
-  }
-});
   
 client.on("message", message => {
   if (!message.content.startsWith(prefix)) return;
