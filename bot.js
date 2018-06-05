@@ -35,7 +35,7 @@ client.on("message", message => {
   
   if (message.content.startsWith(prefix + "8ball")) {
     let replies = ["Sí", "No"];
-    let result = Math.floor((Math.random()* replies.lenght));
+    let result = Math.floor((Math.random() * replies.lenght));
     
     message.channel.send(replies[result]);
   }
