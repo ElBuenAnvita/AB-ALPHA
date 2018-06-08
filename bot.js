@@ -42,10 +42,6 @@ client.on("message", message => {
   if (message.content.startsWith(prefix + "ayuda")) {
     message.channel.send("Soy un bot too' raro.\n¡Consulta mi lista de comandos con `__comandos`!");
   } else
-  if (message.content.startsWith(prefix + "comandos")) {
-    message.channel.send("Te envié mis comandos por mensaje privado, " + message.author.username);
-    message.author.send("```Comandos```\n**__ayuda**: Consigue ayuda del bot.\n**__info**: Información del bot\n**__me**: Consigue tu id de jugador.\n**__ping**: ¡Ping Pong! :ping_pong:\n**__avatar**: Consulta la URL de tu avatar actual.\n**__invite**: Invita a AnviBot a tu servidor de Discord!\n**__xDD**: xDD\n```Página```\nhttp://anvibot.blogspot.com/p/commands");
-  } else
   if (message.content.startsWith(prefix + "info")) {
     message.channel.send("Estado del Bot: **Conectado**\nFallos: **0**\nCreador: **ElBuenAnvita**\nVersión del Bot: " + version);
   } else
@@ -60,6 +56,41 @@ client.on("message", message => {
 client.on('message', message => {
     if (message.content.startsWith(prefix + "me")) {
       message.channel.send('Usuario: **' + message.author.username + '**\nID:' + message.author.id);
+    }
+});
+
+
+client.on('message', message => {
+    if (message.content.startsWith(prefix + "comandos")) {
+      const embed = {
+        "title": "Comandos",
+        "description": "¡Hola! Me has pedido los comandos de mi bot, aquí los tienes",
+        "color": 2335,
+        "fields": [{
+        	"name": "BOT",
+        	"value": "``info``, ``me``"
+	},
+		   {
+        	"name": "IMÁGENES",
+        	"value": "``pat``, ``cat``, ``kiss``, ``idk``, ``owo``, ``lewd``"
+	},
+		   {
+        	"name": "DIVERSIÓN",
+        	"value": "``8ball``, ``shrug``, ``tableflip``, ``xDD``, ``roll``"
+	},
+		   {
+        	"name": "PRONTO",
+        	"value": "``nyaa``, ``ban``, ``kick``, ``say``"
+	},
+        "footer": {
+          "text": "Mi actual prefijo para estos comandos es: " + prefix + "."
+        },
+        "image": {
+          "url": randomQuote2()
+        }
+      }
+      message.channel.send('Te envié los comandos por mensaje privado, <@!' + message.author.id'>.);
+      message.author.send({ embed });
     }
 });
 
