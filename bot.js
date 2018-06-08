@@ -26,7 +26,7 @@ il.run();
 console.log(randomQuote2());
 
 client.on('ready', () => {
-  client.user.setGame('en actualizaciones, no usarme a menos que seas tester.')
+  client.user.setGame('(in test) --ayuda | AnviBot')
 });
 
 client.on("message", message => {
