@@ -67,20 +67,20 @@ client.on('message', message => {
         "description": "¡Hola! Me has pedido los comandos de mi bot, aquí los tienes",
         "color": 2335,
         "fields": [{
-        	"name": "BOT",
-        	"value": "``info``, ``me``"
+             "name": "BOT",
+             "value": "``info``, ``me``"
 	},
 		   {
-        	"name": "IMÁGENES",
-        	"value": "``pat``, ``cat``, ``kiss``, ``idk``, ``owo``, ``lewd``"
+             "name": "IMÁGENES",
+             "value": "``pat``, ``cat``, ``kiss``, ``idk``, ``owo``, ``lewd``"
 	},
 		   {
-        	"name": "DIVERSIÓN",
-        	"value": "``8ball``, ``shrug``, ``tableflip``, ``xDD``, ``roll``"
+             "name": "DIVERSIÓN",
+             "value": "``8ball``, ``shrug``, ``tableflip``, ``xDD``, ``roll``"
 	},
 		   {
-        	"name": "PRONTO",
-        	"value": "``nyaa``, ``ban``, ``kick``, ``say``"
+             "name": "PRONTO",
+             "value": "``nyaa``, ``ban``, ``kick``, ``say``"
 	},
         "footer": {
           "text": "Mi actual prefijo para estos comandos es: " + prefix + "."
