@@ -89,7 +89,7 @@ client.on('message', message => {
           "url": randomQuote2()
         }
       }
-      message.channel.send('Te envié los comandos por mensaje privado, <@!' + message.author.id'>.);
+      message.channel.send('Te envié los comandos por mensaje privado, <@!' + message.author.id + '>.');
       message.author.send({ embed });
     }
 });
