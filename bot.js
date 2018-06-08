@@ -40,14 +40,17 @@ client.on("message", message => {
     message.channel.send("xDD");
   } else
   if (message.content.startsWith(prefix + "ayuda")) {
-    message.channel.send("Soy un bot too' raro.\n¡Consulta mi lista de comandos con `__comandos`!");
+    message.channel.send("Soy un bot too' raro.\n¡Consulta mi lista de comandos con `--comandos`!");
   } else
   if (message.content.startsWith(prefix + "info")) {
     message.channel.send("Estado del Bot: **Conectado**\nFallos: **0**\nCreador: **ElBuenAnvita**\nVersión del Bot: " + version);
   } else
   if (message.content.startsWith(prefix + "invite")) {
     message.channel.send("```AnviBot Alpha Discord Bot```\nSi tienes dudas sobre el bot o quieres colaborar, puedes entrar con el siguiente enlace:\nhttps://discord.gg/PSFfWFp\n\n```Invita AnviBot a tu servidor de Discord```\nPuedes invitar al bot con el siguiente enlace:\nhttps://discordapp.com/api/oauth2/authorize?client_id=419980531564806145&permissions=8&scope=bot\n\n**¡Gracias por usar AnviBot n.n!**");
-  }
+  } else
+  if (message.content.startsWith(prefix + "commandos")) {
+    message.channel.send("Lo siento, algo ocurrió mal y no pude enviar la respuesta al comando <`comandos`>, este error fue notificado.");
+  } else
   if (message.content.startsWith(prefix + "8ball")) {
     message.reply(randomQuote());
   }
@@ -56,41 +59,6 @@ client.on("message", message => {
 client.on('message', message => {
     if (message.content.startsWith(prefix + "me")) {
       message.channel.send('Usuario: **' + message.author.username + '**\nID:' + message.author.id);
-    }
-});
-
-
-client.on('message', message => {
-    if (message.content.startsWith(prefix + "comandos")) {
-      const embed = {
-        "title": "Comandos",
-        "description": "¡Hola! Me has pedido los comandos de mi bot, aquí los tienes",
-        "color": 2335,
-        "fields": [{
-             "name": "BOT",
-             "value": "``info``, ``me``"
-	},
-		   {
-             "name": "IMÁGENES",
-             "value": "``pat``, ``cat``, ``kiss``, ``idk``, ``owo``, ``lewd``"
-	},
-		   {
-             "name": "DIVERSIÓN",
-             "value": "``8ball``, ``shrug``, ``tableflip``, ``xDD``, ``roll``"
-	},
-		   {
-             "name": "PRONTO",
-             "value": "``nyaa``, ``ban``, ``kick``, ``say``"
-	},
-        "footer": {
-          "text": "Mi actual prefijo para estos comandos es: " + prefix + "."
-        },
-        "image": {
-          "url": randomQuote2()
-        }
-      }
-      message.channel.send('Te envié los comandos por mensaje privado, <@!' + message.author.id + '>.');
-      message.author.send({ embed });
     }
 });
 
