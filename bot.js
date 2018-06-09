@@ -24,13 +24,35 @@ il.add(randomQuote2, []);
 il.run();
 
 console.log(randomQuote2());
+//from here down is different gif for command --pat ------------------------------------------------------
+const quotes3 = ["HOLA", "PONÉ LINKS ACA CTM"]
+
+function randomQuote3() {
+	return quotes3[Math.floor(Math.random() * quotes3.length)];
+};
+il.add(randomQuote3, []);
+
+il.run();
+
+console.log(randomQuote3());
+//from here down is different gif for command --roll ------------------------------------------------------
+const quotes4 = ["nada", "por", "aqui"]
+
+function randomQuote4() {
+	return Math.floor(Math.random() * 100);
+};
+il.add(randomQuote4, []);
+
+il.run();
+
+console.log(randomQuote4());
 
 client.on('ready', () => {
-  client.user.setGame('(in test) --ayuda | AnviBot')
+  client.user.setGame(prefix + 'ayuda | AnviBot Alpha')
 });
 
 client.on("message", message => {
-  const version = "alpha_0.1.3.9(edit_19)";
+  const version = "alpha_0.1.4.6(edit_49)";
   if (!message.content.startsWith(prefix)) return;
   
   if (message.content.startsWith(prefix + "ping")) {
@@ -39,20 +61,17 @@ client.on("message", message => {
   if (message.content.startsWith(prefix + "xDD")) {
     message.channel.send("xDD");
   } else
-  if (message.content.startsWith(prefix + "ayuda")) {
-    message.channel.send("Soy un bot too' raro.\n¡Consulta mi lista de comandos con `--comandos`!");
-  } else
   if (message.content.startsWith(prefix + "info")) {
     message.channel.send("Estado del Bot: **Conectado**\nFallos: **0**\nCreador: **ElBuenAnvita**\nVersión del Bot: " + version);
   } else
   if (message.content.startsWith(prefix + "invite")) {
     message.channel.send("```AnviBot Alpha Discord Bot```\nSi tienes dudas sobre el bot o quieres colaborar, puedes entrar con el siguiente enlace:\nhttps://discord.gg/PSFfWFp\n\n```Invita AnviBot a tu servidor de Discord```\nPuedes invitar al bot con el siguiente enlace:\nhttps://discordapp.com/api/oauth2/authorize?client_id=419980531564806145&permissions=8&scope=bot\n\n**¡Gracias por usar AnviBot n.n!**");
   } else
-  if (message.content.startsWith(prefix + "comandos")) {
-    message.channel.send("Lo siento, algo ocurrió mal y no pude enviar la respuesta al comando <`comandos`>, este error fue notificado.");
-  } else
   if (message.content.startsWith(prefix + "8ball")) {
     message.reply(randomQuote());
+  } else
+  if (message.content.startsWith(prefix + "roll")) {
+    message.channel.send('Tu número aleatorio es ' + randomQuote4());
   }
 });
 
@@ -60,6 +79,74 @@ client.on('message', message => {
     if (message.content.startsWith(prefix + "me")) {
       message.channel.send('Usuario: **' + message.author.username + '**\nID:' + message.author.id);
     }
+});
+
+client.on('message', message => {
+  if (message.content.startsWith(prefix + "ayuda")) {
+    const embed = {
+      "title": "",
+      "author": {
+        "name": client.user.username,
+        "icon_url": client.user.avatarURL
+      },
+      "description": "Estos son mis comandos, recuerda que mi actual prefijo es » **" + prefix + "**",
+      "color": 2335,
+      "fields": [{
+        "name": "INFORMACIÓN",
+        "value": "`info`, `me`"
+      },
+      {
+        "name": "IMÁGENES",
+        "value": "`pat`, `kiss`" 
+      },
+      {
+        "name": "DIVERSIÓN",
+        "value": "`xDD`, `8ball`, `roll`"
+      },
+      {
+        "name": "PRONTO",
+        "value": "`say`, `ban`, `inu`, `neko`, `idk`\n\nPuedes entrar a la página oficial de comandos haciendo [click aquí](http://anvibot.blogspot.com/p/commands)"
+      }],
+      "footer": {
+        "text": "Gracias por usar AnviBot! | Creado por ElBuenAnvita"
+      },
+    }
+    message.channel.send({ embed })
+  }
+});
+
+client.on('message', message => {
+  if (message.content.startsWith(prefix + "comandos")) {
+    const embed = {
+      "title": "",
+      "author": {
+        "name": client.user.username,
+        "icon_url": client.user.avatarURL
+      },
+      "description": "Estos son mis comandos, recuerda que mi actual prefijo es » **" + prefix + "**",
+      "color": 2335,
+      "fields": [{
+        "name": "INFORMACIÓN",
+        "value": "`info`, `me`"
+      },
+      {
+        "name": "IMÁGENES",
+        "value": "`pat`, `kiss`" 
+      },
+      {
+        "name": "DIVERSIÓN",
+        "value": "`idk`, `xDD`, `8ball`"
+      },
+      {
+        "name": "PRONTO",
+        "value": "`say`, `ban`, `inu`, `neko`\n\nPuedes entrar a la página oficial de comandos haciendo [click aquí](http://anvibot.blogspot.com/p/commands)"
+      }],
+      "footer": {
+        "text": "Gracias por usar AnviBot! | Creado por ElBuenAnvita"
+      },
+    }
+    message.channel.send({ embed })
+  }
 });
 
 client.on('message', message => {
@@ -83,7 +170,7 @@ client.on('message', message => {
     if (message.content.startsWith(prefix + "avatar")) {
       const embed = {
         "title": "",
-        "description": "Este eres tú, **" + message.author.username + "**, que wap@ estás.",
+        "description": "Este eres tú, <@!" + message.author.id + ">, que wap@ estás.",
         "color": 2335,
         "image": {
           "url": message.author.avatarURL
@@ -97,7 +184,7 @@ client.on('message', message => {
     if (message.content.startsWith(prefix + "pat")) {
       const embed = {
         "title": "",
-        "description": "No te preocupes, **" + message.author.username + "**, yo te acaricio.",
+        "description": "No te preocupes <@!" + message.author.id + ">, yo te acaricio.",
         "color": 2335,
         "footer": {
           "text": "Las imágenes pueden estar sujetas a derechos de autor"
