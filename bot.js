@@ -48,7 +48,7 @@ il.run();
 console.log(randomQuote4());
 
 client.on('ready', () => {
-  client.user.setGame(prefix + 'ayuda | AnviBot Alpha')
+  client.user.setGame(prefix + 'ayuda | AnviBot')
 });
 
 client.on("message", message => {
