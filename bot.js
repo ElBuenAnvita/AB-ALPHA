@@ -59,13 +59,13 @@ il.run();
 console.log(randomQuote5());
 
 client.on('ready', () => {
-  client.user.setGame(prefix + 'ayuda | AnviBot Alpha')
+  client.user.setGame(prefix + 'ayuda | AnviBot')
 });
 
 client.on("message", message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-  const version = "alpha_0.1.9.1(edit_93)";
+  const version = "beta_1.1.2(edit1)";
   if (!message.content.startsWith(prefix)) return;
   
   if (message.content.startsWith(prefix + "ping")) {
@@ -115,7 +115,7 @@ client.on('message', message => {
         "name": client.user.username,
         "icon_url": client.user.avatarURL
       },
-      "description": "Estos son mis comandos, recuerda que mi actual prefijo es » **" + prefix + "**",
+      "description": "Estos son mis comandos, recuerda que mi actual prefijo es » `" + prefix + "`",
       "color": 2335,
       "fields": [{
         "name": "INFORMACIÓN",
@@ -131,7 +131,7 @@ client.on('message', message => {
       },
       {
         "name": "PRONTO",
-        "value": "`ban`, `inu`, `neko`, `idk`\n\nPuedes entrar a la página oficial de comandos haciendo [click aquí](http://anvibot.blogspot.com/p/commands)"
+        "value": "`ban`, `inu`, `kill, `neko`, `idk`\n\nPuedes entrar a la página oficial de comandos haciendo [click aquí](http://anvibot.blogspot.com/p/commands)"
       }],
       "footer": {
         "text": "Gracias por usar AnviBot! | Creado por ElBuenAnvita"
@@ -149,7 +149,7 @@ client.on('message', message => {
         "name": client.user.username,
         "icon_url": client.user.avatarURL
       },
-      "description": "Estos son mis comandos, recuerda que mi actual prefijo es » **" + prefix + "**",
+      "description": "Estos son mis comandos, recuerda que mi actual prefijo es » `" + prefix + "`",
       "color": 2335,
       "fields": [{
         "name": "INFORMACIÓN",
@@ -165,7 +165,7 @@ client.on('message', message => {
       },
       {
         "name": "PRONTO",
-        "value": "`ban`, `inu`, `neko`\n\nPuedes entrar a la página oficial de comandos haciendo [click aquí](http://anvibot.blogspot.com/p/commands)"
+        "value": "`ban`, `inu`, `kill`, `neko`\n\nPuedes entrar a la página oficial de comandos haciendo [click aquí](http://anvibot.blogspot.com/p/commands)"
       }],
       "footer": {
         "text": "Gracias por usar AnviBot! | Creado por ElBuenAnvita"
