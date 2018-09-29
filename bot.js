@@ -63,8 +63,8 @@ il.run();
 console.log(randomQuote5());
 
 client.on('ready', () => {
-  client.user.setGame('Mantenimimiento');
-  client.user.setStatus('dnd')
+  client.user.setGame(prefix + 'ayuda | Nuevos comandos, usa --changelog | AnviBot');
+  // client.user.setStatus('dnd')
 });
 
 client.on("message", message => {
