@@ -63,8 +63,8 @@ il.run();
 console.log(randomQuote5());
 
 client.on('ready', () => {
-  client.user.setGame(prefix + 'ayuda | Nuevos comandos, usa --changelog | AnviBot');
-  // client.user.setStatus('dnd')
+  client.user.setGame('several maitenance lololololol');
+  client.user.setStatus('dnd')
 });
 
 client.on("message", message => {
@@ -77,10 +77,10 @@ client.on("message", message => {
     message.channel.send("**Pong!** :ping_pong:");
   } else
   if (message.content.startsWith(prefix + "info")) {
-    message.channel.send("**Estado del Bot:** Conectado\n**Fallos:** null\n**Creador:** ElBuenAnvita\n**Versión del Bot:** " + version);
+    message.channel.send("**Estado del Bot:** Conectado\n**Fallos:** 7\n**Creador:** ElBuenAnvita\n**Versión del Bot:** " + version);
   } else
   if (message.content.startsWith(prefix + "invite")) {
-    message.channel.send("```AnviBot Alpha Discord Bot```\nSi tienes dudas sobre el bot o quieres colaborar, puedes entrar con el siguiente enlace:\nhttps://discord.gg/PSFfWFp\n\n```Invita AnviBot a tu servidor de Discord```\nPuedes invitar al bot con el siguiente enlace:\nhttps://discordapp.com/api/oauth2/authorize?client_id=419980531564806145&permissions=8&scope=bot\n\n**¡Gracias por usar AnviBot n.n!**");
+    message.channel.send("```AnviServer Discord Bot```\n<https://discord.gg/vqejH9n>\nEl enlace de invitación se ha deshabilitado por seguridad.");
   } else
   if (message.content.startsWith(prefix + "8ball")) {
     message.reply(randomQuote());

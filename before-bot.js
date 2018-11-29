@@ -59,8 +59,8 @@ il.run();
 console.log(randomQuote5());
 
 client.on('ready', () => {
-  client.user.setGame('En mantenimiento.')
-  client.user.setStatus('dnd')
+  client.user.setGame('Several maintenance') // Juego
+  client.user.setStatus('dnd') // Estado dnd: No molestar, idle: Idle
 });
 
 client.on("message", message => {
